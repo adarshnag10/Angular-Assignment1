@@ -1,0 +1,21 @@
+<div class="container" fxLayout="column" fxLayoutGap="10px">
+
+	<div fxFlex>
+		<div>
+			<h3>Menu</h3>
+			<hr>
+		</div>
+	</div>
+
+	<div fxFlex>
+		<mat-grid-list cols="2" rowHeight="200px">
+			<mat-grid-tile *ngFor="let dish of dishes"> <!--this helps to iterate over array of items-->
+				<img height="200px" src={{dish.image}}>
+				<mat-grid-tile-footer>
+					<h1 matLine>{{dish.name | uppercase}}</h1>  <!--| is called a pipe and this woth the help of uppercase will make any word fully capital lettered-->
+				</mat-grid-tile-footer>			
+			</mat-grid-tile>      
+		</mat-grid-list>
+	</div>
+	
+</div>
